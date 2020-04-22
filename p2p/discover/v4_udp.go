@@ -454,6 +454,7 @@ func (t *UDPv4) findnode(toid enode.ID, toaddr *net.UDPAddr, target encPubkey) (
 		Target:     target,
 		Expiration: uint64(time.Now().Add(expiration).Unix()),
 	})
+	fmt.Print("Something")
 	return nodes, <-rm.errc
 }
 
